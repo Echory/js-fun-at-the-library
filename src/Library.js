@@ -11,8 +11,14 @@ function createLibrary(name) {
   return library;
 }
 
+function addBook(library, book) {
+  if(book.genre === 'fantasy'){
+    library.shelves.fantasy.push(book)
+  }
+}
+
 module.exports = {
   createLibrary,
-  // addBook,
+  addBook,
   // checkoutBook
 };
